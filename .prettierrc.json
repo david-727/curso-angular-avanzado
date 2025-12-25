@@ -1,0 +1,11 @@
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": true,
+  "semi": true,
+  "blacketSpacing": true,
+  "arrowParens": "avoid",
+  "trailingComma": "es5",
+  "blacketSameLine": true,
+  "printWidth": 80
+}
