@@ -26,42 +26,50 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-
 ## Configuracion Inicial
 
 Clean up unused imports
+
 ```bash
   ng generate @angular/core:cleanup-unused-imports
 ```
 
 ### EsLint
+
 Install es-lint:
+
 ```bash
   ng add @angular-eslint/schematics@19.1.0
 ```
 
 Fix issues es-lint
+
 ```bash
   ng lint --fix
 ```
 
 ### Prettier
+
 Install prettier
+
 ```bash
   npm i prettier -D
 ```
 
 View problems
+
 ```bash
-  prettier  . 
+  prettier  .
 ```
 
 Fix problems
+
 ```bash
-  prettier --write . 
+  prettier --write .
 ```
 
 Create file .prettierrc.json to speccify custom rules and add code
+
 ```bash
 {
   “tabWidth”: 2,
@@ -77,11 +85,13 @@ Create file .prettierrc.json to speccify custom rules and add code
 ```
 
 ### Avoid conflics between EsLint and Prettier
+
 ```bash
   npm install prettier-eslint eslint-config-prettier eslint-plugin-prettier --save-dev
 ```
 
 Add this code in eslint.config.js file
+
 ```bash
   const prettierRules = require(‘eslint-plugin-prettier/recommended’);
   module.exports = tseslint.config(
