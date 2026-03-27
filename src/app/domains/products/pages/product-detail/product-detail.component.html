@@ -55,5 +55,16 @@
     </div>
   </div>
 
-  <app-related [slug]="data.slug" />
+  <div class="mt-80"></div>
+
+  @defer (on viewport) {
+    <app-related [slug]="data.slug" />
+  } @loading {
+    <img
+      src="https://miro.medium.com/v2/format:webp/0*ZjYSm_q36J4KChdn"
+      alt="This is fine"
+    />
+  } @placeholder {
+    <p>Loading...</p>
+  }
 }
