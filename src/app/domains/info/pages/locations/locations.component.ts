@@ -1,4 +1,10 @@
-import { Component, afterNextRender, inject, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  afterNextRender,
+  inject,
+  signal,
+} from '@angular/core';
 import { rxResource } from '@angular/core/rxjs-interop';
 import { LocationsService } from '@shared/services/locations.service';
 
@@ -6,7 +12,7 @@ import { LocationsService } from '@shared/services/locations.service';
   selector: 'app-locations',
   imports: [],
   templateUrl: './locations.component.html',
-  styleUrl: './locations.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class LocationsComponent {
   private locationService = inject(LocationsService);

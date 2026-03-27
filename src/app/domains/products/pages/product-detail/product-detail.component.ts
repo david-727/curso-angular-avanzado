@@ -1,4 +1,11 @@
-import { Component, effect, inject, input, linkedSignal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  effect,
+  inject,
+  input,
+  linkedSignal,
+} from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ProductService } from '@shared/services/product.service';
 import { CartService } from '@shared/services/cart.service';
@@ -11,6 +18,7 @@ import { RelatedComponent } from '@products/components/related/related.component
   selector: 'app-product-detail',
   imports: [CommonModule, NgOptimizedImage, RelatedComponent],
   templateUrl: './product-detail.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class ProductDetailComponent {
   readonly slug = input.required<string>();
